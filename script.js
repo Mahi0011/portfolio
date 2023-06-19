@@ -74,22 +74,29 @@ if(pos >= s || pos >=scrollpos || scrollpos <= pos+height ){
 
 })
 
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzRI5EWu5P_UgeAPz1CSG07yJnF1OnLp42hz_tz5VNt9KifNl3HKqfbIV97ev7FqSSc/exec'
+			const form = document.getElementById("submit-form")
+
+
+document.getElementById("submit-form").addEventListener("keypress", function(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault(); 
+     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+  }
+});
 
 
 
-$("#submit-form").submit((e)=>{
-  e.preventDefault()
-  $.ajax({
-      url:"https://script.google.com/macros/s/AKfycbzRI5EWu5P_UgeAPz1CSG07yJnF1OnLp42hz_tz5VNt9KifNl3HKqfbIV97ev7FqSSc/exec",
-      data:$("#submit-form").serialize(),
-      method:"post",
-      success:function (response){
-          alert("Form submitted successfully")
-          window.location.reload()
-      },
-      error:function (err){
-          alert("Something Error")
+		  
+			form.addEventListener('submit', e => {
+			  e.preventDefault()
+			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => alert("Thank you! your form is submitted successfully." ))
+				.then(() => {  window.location.reload(); })
+				.catch(error => console.error('Error!', error.message))
+			})
 
-      }
-  })
-})
+
