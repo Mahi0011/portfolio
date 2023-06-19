@@ -64,7 +64,6 @@ const pos = document.getElementById("about").offsetTop
 const scrollpos =Math.round(window.scrollY)
 let s = height/2+scrollpos
 
-console.log(pos,s)
 let iteml = this.document.getElementById("abt-pic")
 let itemr = this.document.getElementById("abt-det")
 if(pos >= s || pos >=scrollpos || scrollpos <= pos+height ){
@@ -73,4 +72,24 @@ if(pos >= s || pos >=scrollpos || scrollpos <= pos+height ){
 }
 
 
+})
+
+
+
+
+$("#submit-form").submit((e)=>{
+  e.preventDefault()
+  $.ajax({
+      url:"https://script.google.com/macros/s/AKfycbzRI5EWu5P_UgeAPz1CSG07yJnF1OnLp42hz_tz5VNt9KifNl3HKqfbIV97ev7FqSSc/exec",
+      data:$("#submit-form").serialize(),
+      method:"post",
+      success:function (response){
+          alert("Form submitted successfully")
+          window.location.reload()
+      },
+      error:function (err){
+          alert("Something Error")
+
+      }
+  })
 })
