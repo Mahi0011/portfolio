@@ -181,8 +181,11 @@ header{
     transition: all 0.5s 0s ease-out;
 }
 .home-btn button:hover{
-    width:90%;
+
+
+    transform: scale(1.1,1.1);
     outline:1px solid white;
+    outline-offset: 2px;
     background: #03b28c;
 }
 .home-links{
