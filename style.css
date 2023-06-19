@@ -620,18 +620,14 @@ padding: 4% 0;
 
 /* ---xl-- */
 @media all and (max-width:1200px){
-    .header{
-        background: pink;
-    }
+
     .cv-btn{
         margin-top: -14%;
     }
 }
 /* ------lg----- */
 @media all and (max-width:991px){
-    .header{
-        background: red;
-    }
+
     .nav-button{
         display: inline;
     }
@@ -729,9 +725,7 @@ padding: 4% 0;
 }
 /* ------md----- */
 @media all and (max-width:768px){
-    .header{
-        background: rgb(72, 131, 98);
-    }
+
 /* ---------------------done------------------ */
 .sec1-home{
     padding-top: 4rem;
@@ -823,9 +817,7 @@ padding: 4% 0;
 }
 /* ------sm----- */
 @media all and (max-width:576px){
-    .header{
-        background: #8823b3;
-    }
+
     .header-logo{
         width: 100%;
     }
