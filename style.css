@@ -113,7 +113,7 @@ header{
     }
 }
 .h-pic{
-    grid-column: 3/8;
+    grid-column: 2/9;
     grid-row: 1/5;
     z-index: 10;
     display: flex;
@@ -324,6 +324,7 @@ header{
 
 
 /* =------------------sec3-skill-------------------- */
+
 .sec3-skills{
     background: #2c2e3c;
     height: 110vh;
@@ -343,18 +344,37 @@ header{
     grid-gap: 1em;
 }
 .skill-card{
-    border: 2px solid #01b58f;
-    border-radius: 10px;
     grid-column: span 2;
     height: 15em; 
-    transition: all 0.3s 0s ease-in;
-    background:rgb(122, 8, 8);
-    background: #000;
+    background: #20232f ;
+    border-radius: 7%;
+    color: #20232f;
+    transition: all 0.2s 0s ease-in !important;
 }
+
 .sk1 ,.sk4{
     grid-column: 2/4;
 }
-.cd-hover{
+.skill-card-logo {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    color: #55eecd;
+}
+.skill-card-logo i{
+    padding-bottom: 5%;
+}
+.skill-card:hover{
+    position: relative;
+    top: -5%;
+    outline: 2px solid #126555 !important;
+    transition: top 1s ease-in;
+}
+
+/* .cd-hover{
     position: relative;
     top: -25%;
     left: 30%;
@@ -368,27 +388,25 @@ header{
     min-height: 40px;
     background: transparent;
     color: transparent;
-}
-.skill-card-logo {
-    height: 100%;
-}
-.skill-card-logo img{
+} */
+
+/* .skill-card-logo img{
     border-radius: 8px;
     width: 100%;
     height: 100%;
     transition: all 0.3s 0s ease-in;
-}
-.skill-card:hover .skill-card-logo img{
+} */
+/* .skill-card:hover .skill-card-logo img{
      opacity: 0.5;
-}
-.skill-card:hover .cd-hover button{
+} */
+/* .skill-card:hover .cd-hover button{
     background: inherit;
     border: 1 px solid rgb(192, 188, 188);
     background: #2c2e3c;
     color: rgb(255, 255, 255);
     transition: all 0.1s 0s ease-in;
-}
-.skill-card:hover .cd-hover button:hover{
+} */
+/* .skill-card:hover .cd-hover button:hover{
     border: 1px solid black;
     transform: scale(0.9,0.9);
     transition: all 0.2s 0s ease-in;
@@ -396,7 +414,7 @@ header{
 .skill-card:hover .cd-hover{
     top: -35%;
     transition: all 0.2s 0s ease-in;
-}
+} */
 /* ---------projects-------- */
 
 .sec4-projects{

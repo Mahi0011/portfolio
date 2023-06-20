@@ -1,4 +1,5 @@
 // ---------------------------menu bar change responsive--------------------
+
 var a = 0;
 let showmenu = () =>{
     let menu = document.getElementById("menu-ul")
@@ -78,25 +79,92 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzRI5EWu5P_UgeAPz1CSG
 			const form = document.getElementById("submit-form")
 
 
+// document.getElementById("submit-form").addEventListener("keypress", function(event) {
+//   let name = document.getElementById("fname").value
+//   let check = /^[a-zA-Z]+$/.test(name)
+//   if (check == "true")
+//   {
+//   if (event.keyCode === 13) {
+//     event.preventDefault(); 
+//      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+// 				.then(response => alert("Thank you! your form is submitted successfully." ))
+// 				.then(() => {  window.location.reload(); })
+// 				.catch(error => console.error('Error!', error.message))
+//   }else{}
+// }
+//   else{
+//     alert("letters only")
+//   }
+// });
+
+
 document.getElementById("submit-form").addEventListener("keypress", function(event) {
+  let name = document.getElementById("fname").value
+  let mail = document.getElementById("fmail").value
+  let check = /^[0-9]+$/.test(name)
+  console.log(check)
   if (event.keyCode === 13) {
+    if(mail !== "")
+    {
+  if (check == false)
+  {
     event.preventDefault(); 
      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 				.then(response => alert("Thank you! your form is submitted successfully." ))
 				.then(() => {  window.location.reload(); })
 				.catch(error => console.error('Error!', error.message))
   }
-});
-
+  else{
+    event.preventDefault()
+    alert("please enter your name correcly")
+    name=""
+  }
+}else{
+  alert("enter email address")
+}
+}
+})
 
 
 		  
-			form.addEventListener('submit', e => {
+			  form.addEventListener('submit', e => {
+        let name = document.getElementById("fname").value
+        let check = /^[0-9]+$/.test(name)
+        console.log(check)
+        if (check == false)
+        {
 			  e.preventDefault()
 			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
 				.then(response => alert("Thank you! your form is submitted successfully." ))
 				.then(() => {  window.location.reload(); })
 				.catch(error => console.error('Error!', error.message))
+      }
+      else{
+        e.preventDefault()
+        alert("please enter your name correcly")
+        name=""
+      }
 			})
 
 
+
+
+
+
+
+
+
+
+      // let de = () => {
+      // let fname = "mahi alakhnas"
+      // let check = /^[a-zA-Z ]+$/.test(fname)
+      // if (check == "true")
+      // {
+      // console.log(check)
+      // }
+      //   else
+      //   {
+      // console.log(check+"no")
+      //   }
+      // }
+      // de()
