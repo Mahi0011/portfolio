@@ -137,7 +137,7 @@ header{
 } 
 .home-pic:hover .h-blue img{
     transform: scale(1.1,1.1);
-    transition: all 0.5s 0s ease-in;
+    transition: all 0.4s 0s ease-in;
 }
 
 /* -----------------home details-------------------- */
@@ -251,17 +251,20 @@ header{
     border-radius:50%;
     overflow: hidden;
     background: #2c2e3c;
-    border: 10px solid #01b58f;
+    border: 1px solid #01b58f;
+    box-shadow: 0px 0px 5px 2px #01b58f;
     z-index: 2;
     transition: all 0.4s 0s linear;
+    position: relative;
+    top:0%;
 }
 .home-img-headc:hover .home-img-cont{
     border: 10px solid #20232f;
+    box-shadow: 0px 0px 0px 0px #01b58f;
     width: 10vw;
     height: 12vw;
     position: relative;
     top:4%;
-    transition: all 0.3s 0s linear;
 }
 .home-img-headc:hover .img-det-card{
     background: #2c2e3c;
@@ -349,7 +352,9 @@ header{
     background: #20232f ;
     border-radius: 7%;
     color: #20232f;
-    transition: all 0.2s 0s ease-in !important;
+    position: relative;
+    top: 0;
+    transition: all 0.2s 0s linear ;
 }
 
 .sk1 ,.sk4{
@@ -365,13 +370,13 @@ header{
     color: #55eecd;
 }
 .skill-card-logo i{
-    padding-bottom: 5%;
+    padding-bottom: 10%;
 }
 .skill-card:hover{
     position: relative;
-    top: -5%;
-    outline: 2px solid #126555 !important;
-    transition: top 1s ease-in;
+    top: -2%;
+    /* outline: 2px solid #126555 !important; */
+    box-shadow: 0px 0px 10px 0px #7881a5;
 }
 
 /* .cd-hover{
@@ -427,8 +432,8 @@ header{
     text-align: center;
 }
 .pc-container{
-    border-top: 2px solid #01b58f;
-    border-bottom: 2px solid #01b58f;
+    border-top: 2px solid #5e5e5e;
+    border-bottom: 2px solid #5e5e5e;
     height: 82%;
     width: 80%;
     padding: 1% 0;
@@ -442,24 +447,34 @@ header{
     width: 0;
 }
 .project-card{
-    border: 2px solid #01b58f;
+    border: 1px solid #01b58f;
     border-radius: 10px;
     width: 25em;
     background: #20232f;
     height: 100%;
     margin:0 2em;
+    position: relative;
+    top: 0;
+    transition: all 0.1s 0s linear;
+}
+.project-card:hover{
+    box-shadow: 0px 0px 10px 1px #2c2e3c;
+    top: -1px;
 }
 .pc-img{
     height: 50%;
     background: black;
+    object-fit: cover;
+    border-radius: 10px;
 }
 .pc-img img{
     width: 100%;
     height: 100%;
-    transition: all 0.5s 0s ease-in;
+    border-radius: 10px;
+    transition: all 0.2s 0s ease-in;
 }
 .pc-img:hover img{
-    opacity: 0.5;
+    opacity: 0.8;
 }
 .pc-img:hover .pc-hover{
     transition: all 0.5s 0s ease-in;
@@ -786,6 +801,9 @@ padding: 4% 0;
     min-width: 40%;
     width: fit-content;
     height:fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .home-img-cont{
     width: 24vw;
@@ -908,13 +926,10 @@ height: 100vh;
 }
 .pc-container{
     height: 85%;
-    width: 80%;
+    width: 92%;
     padding: 1% 0;
+    margin-left: 4%;
 }
-    .img-det-card{
-        height: 80%;
-        width: 80%;
-    }
 
     .cv-img-contain{
     margin-top: -10%;
