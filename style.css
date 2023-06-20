@@ -649,6 +649,9 @@ padding: 4% 0;
 /* ------lg----- */
 @media all and (max-width:991px){
 
+    .header{
+        border-bottom: 0;
+    }
     .nav-button{
         display: inline;
     }
@@ -657,13 +660,14 @@ padding: 4% 0;
         flex-direction: column;
         align-items: stretch;
         background: #20232f;
+        border-bottom-left-radius: 10px;
         padding-right: 2vw;
         width: 35vw;
         float: right;
         position: relative;
         right: -10px;
-        top:-18px;
-        height: 200rem;
+        top:-21px;
+        min-height: fit-content;
     }
     .header-nav ul li{
         width: 100%;
@@ -672,8 +676,18 @@ padding: 4% 0;
         justify-content: start;
         position: relative;
         top:-46%;
-        
+        border-bottom-left-radius: 10px;
     }
+    .nav-link{
+        margin-bottom: 0px;
+        border-top: 1px solid #2e2c3e;
+    }
+    .nav-link:hover,.nav-link:focus{
+        color: white;
+        border: 1px solid rgb(101, 101, 101);
+        border-bottom-left-radius: 10px;
+    }
+
 /* ---------------------done------------------ */
     .sec1-home{
         padding-top: 4rem;
@@ -705,14 +719,7 @@ padding: 4% 0;
 }
 
 /* ----------------done------------- */
-    .nav-link{
-        border-bottom: 1px solid #858585;
-        margin-bottom: 0px;
-    }
-    .nav-link:hover,.nav-link:focus{
-        color: white;
-        border: 1px solid rgb(101, 101, 101);
-    }
+
     .img-det-card{
         align-self: center;
         text-align:left;

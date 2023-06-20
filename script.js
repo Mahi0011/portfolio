@@ -1,6 +1,6 @@
 // ---------------------------menu bar change responsive--------------------
 
-var a = 0;
+var a = 1;
 let showmenu = () =>{
     let menu = document.getElementById("menu-ul")
     if(a%2!=0){
@@ -22,7 +22,7 @@ let showmenu = () =>{
     if (p > c) {
       document.getElementById("header").style.top = "0";
     } else {
-      document.getElementById("header").style.top = "-100px";
+      document.getElementById("header").style.top = "-500px";
     }
   }
     p = c;
