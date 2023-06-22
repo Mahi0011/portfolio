@@ -12,7 +12,10 @@ let showmenu = () =>{
         a--
     }
 }
-
+window.onload = function() {
+  let menu = document.getElementById("menu-ul")
+  menu.style.right = "-500px"
+};
 
   // -----------NAVBAR INVISIBLE-----------------
   var p = window.scrollY;
@@ -79,31 +82,12 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbzRI5EWu5P_UgeAPz1CSG
 			const form = document.getElementById("submit-form")
 
 
-// document.getElementById("submit-form").addEventListener("keypress", function(event) {
-//   let name = document.getElementById("fname").value
-//   let check = /^[a-zA-Z]+$/.test(name)
-//   if (check == "true")
-//   {
-//   if (event.keyCode === 13) {
-//     event.preventDefault(); 
-//      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-// 				.then(response => alert("Thank you! your form is submitted successfully." ))
-// 				.then(() => {  window.location.reload(); })
-// 				.catch(error => console.error('Error!', error.message))
-//   }else{}
-// }
-//   else{
-//     alert("letters only")
-//   }
-// });
-
-
 document.getElementById("submit-form").addEventListener("keypress", function(event) {
   let name = document.getElementById("fname").value
   let mail = document.getElementById("fmail").value
   let check = /^[0-9]+$/.test(name)
   console.log(check)
-  if (event.keyCode === 13) {
+  if (event === 13) {
     if(mail !== "")
     {
   if (check == false)

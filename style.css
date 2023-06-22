@@ -139,7 +139,6 @@ header{
     transform: scale(1.1,1.1);
     transition: all 0.4s 0s ease-in;
 }
-
 /* -----------------home details-------------------- */
 
 .home-details{
@@ -179,13 +178,13 @@ header{
     border-radius: 5px;
     color: white;
     transition: all 0.5s 0s ease-out;
+    position: relative;
+    top: 0;
+    right: 0;
 }
 .home-btn button:hover{
-
-
-    transform: scale(1.1,1.1);
-    outline:1px solid white;
-    outline-offset: 2px;
+    top:-1px;
+    right: 1px;
     background: #03b28c;
 }
 .home-links{
